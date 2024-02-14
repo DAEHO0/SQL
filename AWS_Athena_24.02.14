@@ -1,0 +1,8 @@
+# 테이블 삭제
+DROP TABLE 'TB명';
+
+# 테이블 미리보기(10줄)
+SELECT * FROM "DB명"."TB명";
+
+# AWS Athena는 Presto를 기반으로 하기 때문에
+# '#'이 아닌 '--'로 주석 작성

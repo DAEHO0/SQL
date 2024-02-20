@@ -6,3 +6,9 @@ SELECT * FROM "DB명"."TB명";
 
 # AWS Athena는 Presto를 기반으로 하기 때문에
 # '#'이 아닌 '--'로 주석 작성
+# 예시)
+
+-- University of Cambridge인 행을 조회
+SELECT university, overall_score, academic_reputation, employer_reputation
+    FROM top_unvr
+    WHERE university = 'University of Cambridge';

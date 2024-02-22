@@ -1,0 +1,29 @@
+-- ADD COLUMN: 테이블의 새로운 컬럼 추가
+-- 데이터 유형으로는 number, varchar(n), DATE 등이 있음(Oracle SQL 기준)
+ALTER TABLE [table_name] ADD [column_name] [data_type];
+
+-- 또는 테이블A에 새로운 컬럼B, 컬럼C를 추가하기
+ALTER TABLE [table_A]
+  add [column_B] [data_type]
+  add [column_C] [data_type];
+
+-- 필요없는 컬럼 삭제
+ALTER TABLE [table_name] DROP [column_name];
+
+-- 테이블에 존재하는 컬럼에 대해 제약조건에 대한 변경
+-- 제약조건의 종류: NOT NULL, UNIQUE, CHECK, PRIMARY KEY, FOREIGN KEY, DEFAULT
+
+-- data_type 변경
+ALTER TABLE [table_name] MODIFY [column_name] [data_type];
+
+-- DEFAULT 값 변경
+ALTER TABLE [table_name] ALTER COLUMN [column_name] SET DEFAULT [default] ;
+
+-- NOT NULL 제약조건
+ALTER TABLE [table_name] MODIFY ([column_name] NOT NULL);
+
+-- DROP CONSTRAINT: 기존에 부여했던 제약조건 삭제
+ALTER TABLE [table_name] DROP CONSTRAINT [constraint_name];
+
+-- ADD CONSTRAINT
+ALTER TABLE [table_name] ADD CONSTRAINT [constraint_name] [constriant] [column_name];
